@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Manolo Vargas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            card: '#1e293b',
+                            accent: '#3b82f6',
+                            text: '#94a3b8'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-dark text-white font-sans antialiased">
+
+    <nav class="fixed w-full z-50 bg-brand-dark/95 backdrop-blur-sm border-b border-gray-800 shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white tracking-tighter hover:text-brand-accent transition">
+                Manolo<span class="text-brand-accent">.Dev</span>
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#inicio" class="hover:text-brand-accent transition">Inicio</a>
+                <a href="#stack" class="hover:text-brand-accent transition">Habilidades</a>
+                <a href="#proyectos" class="hover:text-brand-accent transition">Proyectos</a>
+                <a href="#certificados" class="hover:text-brand-accent transition">Formación</a>
+                <a href="#contacto" class="hover:text-brand-accent transition">Contacto</a>
+            </div>
+            <button class="md:hidden text-2xl text-white"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <section id="inicio" class="min-h-screen flex items-center justify-center pt-24 pb-12 px-4">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            
+            <div class="order-2 md:order-1 text-center md:text-left">
+                <span class="inline-block py-1 px-3 rounded-full bg-brand-accent/10 text-brand-accent text-sm font-semibold mb-6 border border-brand-accent/20">
+                     Hola, soy Manolo Aguilar
+                </span>
+                
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    Desarrollador de Software <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Full Stack & Backend</span>
+                </h1>
+                
+                <p class="text-lg text-brand-text mb-8 leading-relaxed">
+                    Estudiante de 5.º año de Licenciatura en Informática, enfocado en el desarrollo de software. 
+                    Cuento con experiencia práctica en la creación de aplicaciones full-stack utilizando 
+                    <strong class="text-white">Java (Spring Boot, JPA)</strong> y <strong class="text-white">.NET (C#, ASP.NET)</strong>. 
+                    Sólidos conocimientos en la gestión de bases de datos SQL (<strong class="text-white">SQL Server, MySQL, PostgreSQL</strong>). 
+                    Busco una posición de entrada como Desarrollador Junior para aportar soluciones y crecer profesionalmente.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#proyectos" class="px-8 py-3 bg-brand-accent hover:bg-blue-600 rounded-full font-bold transition shadow-lg shadow-blue-500/30 text-center">
+                        Ver Proyectos
+                    </a>
+                    <a href="#contacto" class="px-8 py-3 border border-gray-600 hover:border-white rounded-full font-bold transition flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-linkedin"></i> Contactar
+                    </a>
+                </div>
+            </div>
+
+            <div class="order-1 md:order-2 flex justify-center relative">
+                <div class="absolute inset-0 bg-brand-accent/20 blur-3xl rounded-full transform scale-75"></div>
+                
+                <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-brand-accent/50 overflow-hidden shadow-2xl bg-gray-800">
+                    <img src="img/foto.png" 
+                         alt="Foto de Manolo Aguilar" 
+                         class="w-full h-full object-cover">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="stack" class="py-20 bg-brand-card border-y border-gray-800">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Arsenal Tecnológico</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="p-6 bg-brand-dark rounded-xl border border-gray-800 hover:border-brand-accent transition group text-center hover:-translate-y-1">
+                    <i class="fa-brands fa-java text-4xl mb-4 text-orange-500 group-hover:scale-110 transition"></i>
+                    <h3 class="font-bold text-lg">Java</h3>
+                    <p class="text-xs text-brand-text mt-1">Spring Boot, JPA</p>
+                </div>
+                <div class="p-6 bg-brand-dark rounded-xl border border-gray-800 hover:border-brand-accent transition group text-center hover:-translate-y-1">
+                    <i class="fa-brands fa-microsoft text-4xl mb-4 text-purple-500 group-hover:scale-110 transition"></i>
+                    <h3 class="font-bold text-lg">.NET</h3>
+                    <p class="text-xs text-brand-text mt-1">C#, ASP.NET</p>
+                </div>
+                <div class="p-6 bg-brand-dark rounded-xl border border-gray-800 hover:border-brand-accent transition group text-center hover:-translate-y-1">
+                    <i class="fa-solid fa-database text-4xl mb-4 text-blue-400 group-hover:scale-110 transition"></i>
+                    <h3 class="font-bold text-lg">SQL</h3>
+                    <p class="text-xs text-brand-text mt-1">Server, MySQL, Postgres</p>
+                </div>
+                <div class="p-6 bg-brand-dark rounded-xl border border-gray-800 hover:border-brand-accent transition group text-center hover:-translate-y-1">
+                    <i class="fa-brands fa-python text-4xl mb-4 text-yellow-400 group-hover:scale-110 transition"></i>
+                    <h3 class="font-bold text-lg">Python</h3>
+                    <p class="text-xs text-brand-text mt-1">Scripts, Datos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyectos" class="py-20">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-4">Proyectos Académicos</h2>
+            <p class="text-brand-text mb-12">Aplicando teoría a soluciones reales.</p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <article class="bg-brand-card rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition duration-300 border border-gray-800 shadow-xl">
+                    <div class="h-48 bg-gray-700 flex items-center justify-center relative group">
+                        <div class="absolute inset-0 bg-brand-dark/50 group-hover:bg-brand-dark/30 transition"></div>
+                        <i class="fa-solid fa-code text-4xl text-gray-500 group-hover:text-white transition"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-blue-900/50 text-blue-300 px-2 py-1 rounded border border-blue-800">Spring Boot</span>
+                            <span class="text-xs bg-orange-900/50 text-orange-300 px-2 py-1 rounded border border-orange-800">Hibernate</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-white">Gestión de Usuarios API</h3>
+                        <p class="text-brand-text text-sm mb-4">
+                            Sistema backend seguro para administración de roles y usuarios, implementando autenticación JWT.
+                        </p>
+                        <a href="#" class="text-brand-accent text-sm font-bold hover:underline">Ver Código <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </article>
+
+                <article class="bg-brand-card rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition duration-300 border border-gray-800 shadow-xl">
+                    <div class="h-48 bg-gray-700 flex items-center justify-center relative group">
+                         <i class="fa-solid fa-server text-4xl text-gray-500 group-hover:text-white transition"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-purple-900/50 text-purple-300 px-2 py-1 rounded border border-purple-800">ASP.NET</span>
+                            <span class="text-xs bg-blue-900/50 text-blue-300 px-2 py-1 rounded border border-blue-800">SQL Server</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-white">Sistema de Facturación</h3>
+                        <p class="text-brand-text text-sm mb-4">
+                            Aplicación web con arquitectura MVC para control de inventarios y emisión de facturas.
+                        </p>
+                        <a href="#" class="text-brand-accent text-sm font-bold hover:underline">Ver Código <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </article>
+
+                <article class="bg-brand-card rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition duration-300 border border-gray-800 shadow-xl">
+                    <div class="h-48 bg-gray-700 flex items-center justify-center relative group">
+                         <i class="fa-solid fa-database text-4xl text-gray-500 group-hover:text-white transition"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-yellow-900/50 text-yellow-300 px-2 py-1 rounded border border-yellow-800">Python</span>
+                            <span class="text-xs bg-blue-900/50 text-blue-300 px-2 py-1 rounded border border-blue-800">Postgres</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-white">Analítica de Datos</h3>
+                        <p class="text-brand-text text-sm mb-4">
+                            Scripts automatizados para la extracción y transformación de datos (ETL) desde Postgres.
+                        </p>
+                        <a href="#" class="text-brand-accent text-sm font-bold hover:underline">Ver Código <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="certificados" class="py-20 bg-brand-dark border-t border-gray-800">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Certificaciones y Logros</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <div class="group bg-brand-card rounded-2xl p-4 border border-gray-800 hover:border-brand-accent transition hover:shadow-2xl hover:shadow-blue-900/20">
+                    <div class="h-64 overflow-hidden rounded-xl bg-gray-900 relative">
+                        <img src="img/certificado1.png" alt="Certificado Java" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 flex items-center justify-center pointer-events-none group-hover:opacity-0 transition">
+                             <i class="fa-solid fa-certificate text-5xl text-gray-700"></i>
+                        </div>
+                    </div>
+                    <div class="mt-6 px-2">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Desarrollo Web Full Stack</h3>
+                                <p class="text-brand-accent font-medium mt-1">Universidad Tecnológica</p>
+                            </div>
+                            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">2023</span>
+                        </div>
+                        <p class="text-brand-text text-sm mt-3">
+                            Curso intensivo de 60 horas sobre arquitecturas modernas y despliegue de aplicaciones.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="group bg-brand-card rounded-2xl p-4 border border-gray-800 hover:border-brand-accent transition hover:shadow-2xl hover:shadow-blue-900/20">
+                    <div class="h-64 overflow-hidden rounded-xl bg-gray-900 relative">
+                        <img src="img/certificado2.png" alt="Certificado Bases de Datos" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 flex items-center justify-center pointer-events-none group-hover:opacity-0 transition">
+                             <i class="fa-solid fa-award text-5xl text-gray-700"></i>
+                        </div>
+                    </div>
+                    <div class="mt-6 px-2">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Administración SQL Server</h3>
+                                <p class="text-brand-accent font-medium mt-1">Plataforma Udemy / Coursera</p>
+                            </div>
+                            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">2024</span>
+                        </div>
+                        <p class="text-brand-text text-sm mt-3">
+                            Especialización en optimización de consultas, stored procedures y seguridad en bases de datos.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center text-brand-text hover:text-white transition border-b border-transparent hover:border-brand-accent pb-1">
+                    Ver perfil completo en LinkedIn <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="contacto" class="bg-black py-12 border-t border-gray-800 text-center">
+        <h2 class="text-2xl font-bold mb-6">¿Trabajamos juntos?</h2>
+        <p class="text-brand-text mb-8 max-w-lg mx-auto">Estoy listo para iniciar mi carrera profesional y aportar valor a tu equipo.</p>
+        
+        <div class="flex justify-center gap-8 mb-8">
+            <a href="#" class="text-4xl text-gray-500 hover:text-white transition hover:scale-110"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" class="text-4xl text-gray-500 hover:text-white transition hover:scale-110"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:tuemail@gmail.com" class="text-4xl text-gray-500 hover:text-white transition hover:scale-110"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        <p class="text-sm text-gray-600">© 2026 Manolo Aguilar. Desarrollado con HTML + Tailwind CSS.</p>
+    </footer>
+
+</body>
+</html>
