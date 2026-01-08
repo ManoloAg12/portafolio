@@ -35,14 +35,28 @@
             <a href="#" class="text-2xl font-bold text-white tracking-tighter hover:text-brand-accent transition">
                 Manolo<span class="text-brand-accent">.Dev</span>
             </a>
-            <div class="hidden md:flex space-x-8 text-sm font-medium">
+            
+            <div class="hidden md:flex space-x-6 text-sm font-medium">
                 <a href="#inicio" class="hover:text-brand-accent transition">Inicio</a>
                 <a href="#stack" class="hover:text-brand-accent transition">Habilidades</a>
                 <a href="#proyectos" class="hover:text-brand-accent transition">Proyectos</a>
                 <a href="#certificados" class="hover:text-brand-accent transition">Formación</a>
-                <a href="#contacto" class="hover:text-brand-accent transition">Contacto</a>
+                <a href="#contacto" class="hover:text-brand-accent transition px-4 py-2 bg-brand-accent rounded-full text-white hover:bg-blue-600">Contacto</a>
             </div>
-            <button class="md:hidden text-2xl text-white"><i class="fa-solid fa-bars"></i></button>
+            
+            <button id="menu-btn" class="md:hidden text-2xl text-white hover:text-brand-accent transition focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-card border-t border-gray-800 animate-fade-in-down">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#inicio" class="block px-3 py-3 rounded-md text-base font-medium text-white hover:bg-brand-dark hover:text-brand-accent transition">Inicio</a>
+                <a href="#stack" class="block px-3 py-3 rounded-md text-base font-medium text-white hover:bg-brand-dark hover:text-brand-accent transition">Habilidades</a>
+                <a href="#proyectos" class="block px-3 py-3 rounded-md text-base font-medium text-white hover:bg-brand-dark hover:text-brand-accent transition">Proyectos</a>
+                <a href="#certificados" class="block px-3 py-3 rounded-md text-base font-medium text-white hover:bg-brand-dark hover:text-brand-accent transition">Formación</a>
+                <a href="#contacto" class="block px-3 py-3 rounded-md text-base font-bold text-brand-accent hover:bg-brand-dark transition">Contacto</a>
+            </div>
         </div>
     </nav>
 
@@ -252,6 +266,8 @@
         </div>
         <p class="text-sm text-gray-600">© 2026 Manolo Aguilar. Desarrollado con HTML + Tailwind CSS.</p>
     </footer>
+
+    <script src="js/home.js"></script>
 
 </body>
 </html>
