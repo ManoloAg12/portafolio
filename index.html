@@ -17,10 +17,10 @@
                     },
                     colors: {
                         brand: {
-                            dark: '#0f172a',
-                            card: '#1e293b',
-                            accent: '#3b82f6',
-                            text: '#94a3b8'
+                            dark: '#0c0c0c', /* Fondo Negro Mate Profundo */
+                            card: '#171717', /* Tarjetas Gris Carbón Oscuro */
+                            accent: '#16a34a', /* NUEVO ACENTO: Verde Vibrante (Green-600) */
+                            text: '#a3a3a3'  /* Texto gris medio */
                         }
                     }
                 }
@@ -30,13 +30,13 @@
 </head>
 <body class="bg-brand-dark text-white font-sans antialiased">
 
-    <nav class="fixed w-full z-50 bg-brand-dark/95 backdrop-blur-sm border-b border-gray-800 shadow-lg">
+    <nav class="fixed w-full z-50 bg-brand-dark/95 backdrop-blur-sm border-b border-gray-900 shadow-lg shadow-black/20">
         <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
             <a href="#" class="text-2xl font-bold text-white tracking-tighter hover:text-brand-accent transition">
                 Manolo<span class="text-brand-accent">.Dev</span>
             </a>
             
-            <div class="hidden md:flex space-x-6 text-sm font-medium">
+            <div class="hidden md:flex space-x-6 text-sm font-medium text-gray-300">
                 <a href="#inicio" class="hover:text-brand-accent transition">Inicio</a>
                 <a href="#stack" class="hover:text-brand-accent transition">Habilidades</a>
                 <a href="#proyectos" class="hover:text-brand-accent transition">Proyectos</a>
@@ -44,48 +44,50 @@
                 <a href="#contacto" class="hover:text-brand-accent transition">Contacto</a>
             </div>
             
-            <button id="menu-btn" class="md:hidden text-2xl text-white hover:text-brand-accent transition focus:outline-none">
+            <button id="menu-btn" class="md:hidden text-2xl text-white transition focus:outline-none hover:text-brand-accent">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-brand-card border-t border-gray-800 animate-fade-in-down">
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-card border-t border-gray-900 animate-fade-in-down">
             <div class="px-4 pt-2 pb-6 space-y-1">
-                <a href="#inicio" class="block px-3 py-3 rounded-md text-base font-medium text-white hover:bg-brand-dark hover:text-brand-accent transition">Inicio</a>
-                <a href="#stack" class="block px-3 py-3 rounded-md text-base font-medium text-white hover:bg-brand-dark hover:text-brand-accent transition">Habilidades</a>
-                <a href="#proyectos" class="block px-3 py-3 rounded-md text-base font-medium text-white hover:bg-brand-dark hover:text-brand-accent transition">Proyectos</a>
-                <a href="#certificados" class="block px-3 py-3 rounded-md text-base font-medium text-white hover:bg-brand-dark hover:text-brand-accent transition">Formación</a>
-                <a href="#contacto" class="block px-3 py-3 rounded-md text-base font-bold text-brand-accent hover:bg-brand-dark transition">Contacto</a>
+                <a href="#inicio" class="block px-3 py-3 rounded-md text-base font-medium text-gray-300 hover:bg-brand-dark hover:text-brand-accent transition">Inicio</a>
+                <a href="#stack" class="block px-3 py-3 rounded-md text-base font-medium text-gray-300 hover:bg-brand-dark hover:text-brand-accent transition">Habilidades</a>
+                <a href="#proyectos" class="block px-3 py-3 rounded-md text-base font-medium text-gray-300 hover:bg-brand-dark hover:text-brand-accent transition">Proyectos</a>
+                <a href="#certificados" class="block px-3 py-3 rounded-md text-base font-medium text-gray-300 hover:bg-brand-dark hover:text-brand-accent transition">Formación</a>
+                <a href="#contacto" class="block px-3 py-3 rounded-md text-base font-bold text-brand-accent bg-brand-accent/10 hover:bg-brand-accent/20 transition">Contacto</a>
             </div>
         </div>
     </nav>
 
-    <section id="inicio" class="min-h-screen flex items-center justify-center pt-24 pb-12 px-4">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <section id="inicio" class="min-h-screen flex items-center justify-center pt-24 pb-12 px-4 relative overflow-hidden">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-accent/5 blur-[150px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
             
             <div class="order-2 md:order-1 text-center md:text-left">
                 <span class="inline-block py-1 px-3 rounded-full bg-brand-accent/10 text-brand-accent text-sm font-semibold mb-6 border border-brand-accent/20">
                      Hola, soy Manolo Aguilar
                 </span>
                 
-                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
                     Desarrollador de Software <br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Full Stack & Backend</span>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-green-400">Full Stack & Backend</span>
                 </h1>
                 
                 <p class="text-lg text-brand-text mb-8 leading-relaxed">
                     Estudiante de 5.º año de Licenciatura en Informática, enfocado en el desarrollo de software. 
                     Cuento con experiencia práctica en la creación de aplicaciones full-stack utilizando 
-                    <strong class="text-white">Java (Spring Boot, JPA)</strong> y <strong class="text-white">.NET (C#, ASP.NET)</strong>. 
-                    Sólidos conocimientos en la gestión de bases de datos SQL (<strong class="text-white">SQL Server, MySQL, PostgreSQL</strong>). 
+                    <strong class="text-brand-accent">Java (Spring Boot, JPA)</strong> y <strong class="text-brand-accent">.NET (C#, ASP.NET)</strong>. 
+                    Sólidos conocimientos en la gestión de bases de datos SQL (<strong class="text-brand-accent">SQL Server, MySQL, PostgreSQL</strong>). 
                     Busco una posición de entrada como Desarrollador Junior para aportar soluciones y crecer profesionalmente.
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                    <a href="#proyectos" class="px-8 py-3 bg-brand-accent hover:bg-blue-600 rounded-full font-bold transition shadow-lg shadow-blue-500/30 text-center">
+                    <a href="#proyectos" class="px-8 py-3 bg-brand-accent hover:bg-green-500 text-white rounded-full font-bold transition text-center shadow-lg shadow-brand-accent/20">
                         Ver Proyectos
                     </a>
-                    <a href="#contacto" class="px-8 py-3 border border-gray-600 hover:border-white rounded-full font-bold transition flex items-center justify-center gap-2">
+                    <a href="#contacto" class="px-8 py-3 border border-brand-accent text-brand-accent hover:bg-brand-accent/10 rounded-full font-bold transition flex items-center justify-center gap-2">
                         <i class="fa-brands fa-linkedin"></i> Contactar
                     </a>
                 </div>
@@ -94,39 +96,39 @@
             <div class="order-1 md:order-2 flex justify-center relative">
                 <div class="absolute inset-0 bg-brand-accent/20 blur-3xl rounded-full transform scale-75"></div>
                 
-                <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-brand-accent/50 overflow-hidden shadow-2xl bg-gray-800">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-brand-accent/50 overflow-hidden shadow-2xl shadow-black/50 bg-gray-900">
                     <img src="img/foto.png" 
                          alt="Foto de Manolo Aguilar" 
-                         class="w-full h-full object-cover">
+                         class="w-full h-full object-cover hover:scale-105 transition duration-500">
                 </div>
             </div>
 
         </div>
     </section>
 
-    <section id="stack" class="py-20 bg-brand-card border-y border-gray-800">
+    <section id="stack" class="py-20 bg-brand-card border-y border-gray-900">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-12 text-center">Arsenal Tecnológico</h2>
+            <h2 class="text-3xl font-bold mb-12 text-white text-center">Arsenal Tecnológico</h2>
             
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <div class="p-6 bg-brand-dark rounded-xl border border-gray-800 hover:border-brand-accent transition group text-center hover:-translate-y-1">
                     <i class="fa-brands fa-java text-4xl mb-4 text-orange-500 group-hover:scale-110 transition"></i>
-                    <h3 class="font-bold text-lg">Java</h3>
+                    <h3 class="font-bold text-lg text-white group-hover:text-brand-accent transition">Java</h3>
                     <p class="text-xs text-brand-text mt-1">Spring Boot, JPA</p>
                 </div>
                 <div class="p-6 bg-brand-dark rounded-xl border border-gray-800 hover:border-brand-accent transition group text-center hover:-translate-y-1">
                     <i class="fa-brands fa-microsoft text-4xl mb-4 text-purple-500 group-hover:scale-110 transition"></i>
-                    <h3 class="font-bold text-lg">.NET</h3>
+                    <h3 class="font-bold text-lg text-white group-hover:text-brand-accent transition">.NET</h3>
                     <p class="text-xs text-brand-text mt-1">C#, ASP.NET</p>
                 </div>
                 <div class="p-6 bg-brand-dark rounded-xl border border-gray-800 hover:border-brand-accent transition group text-center hover:-translate-y-1">
                     <i class="fa-solid fa-database text-4xl mb-4 text-blue-400 group-hover:scale-110 transition"></i>
-                    <h3 class="font-bold text-lg">SQL</h3>
+                    <h3 class="font-bold text-lg text-white group-hover:text-brand-accent transition">SQL</h3>
                     <p class="text-xs text-brand-text mt-1">Server, MySQL, Postgres</p>
                 </div>
                 <div class="p-6 bg-brand-dark rounded-xl border border-gray-800 hover:border-brand-accent transition group text-center hover:-translate-y-1">
                     <i class="fa-brands fa-python text-4xl mb-4 text-yellow-400 group-hover:scale-110 transition"></i>
-                    <h3 class="font-bold text-lg">Python</h3>
+                    <h3 class="font-bold text-lg text-white group-hover:text-brand-accent transition">Python</h3>
                     <p class="text-xs text-brand-text mt-1">Scripts, Datos</p>
                 </div>
             </div>
@@ -135,22 +137,22 @@
 
     <section id="proyectos" class="py-20">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-4">Proyectos Académicos</h2>
+            <h2 class="text-3xl font-bold mb-4 text-white">Proyectos Académicos</h2>
             <p class="text-brand-text mb-12">Aplicando teoría a soluciones reales.</p>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <article class="bg-brand-card rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition duration-300 border border-gray-800 shadow-xl">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center relative group">
-                        <div class="absolute inset-0 bg-brand-dark/50 group-hover:bg-brand-dark/30 transition"></div>
-                        <i class="fa-solid fa-code text-4xl text-gray-500 group-hover:text-white transition"></i>
+                <article class="bg-brand-card rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition duration-300 border border-gray-800 shadow-xl hover:shadow-2xl hover:shadow-black/50 group">
+                    <div class="h-48 bg-gray-900 flex items-center justify-center relative">
+                        <div class="absolute inset-0 bg-brand-dark/50 group-hover:bg-brand-accent/10 transition"></div>
+                        <i class="fa-solid fa-code text-4xl text-gray-500 group-hover:text-brand-accent transition"></i>
                     </div>
                     <div class="p-6">
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-blue-900/50 text-blue-300 px-2 py-1 rounded border border-blue-800">Spring Boot</span>
-                            <span class="text-xs bg-orange-900/50 text-orange-300 px-2 py-1 rounded border border-orange-800">Hibernate</span>
+                            <span class="text-xs bg-blue-900/30 text-blue-300 px-2 py-1 rounded border border-blue-800">Spring Boot</span>
+                            <span class="text-xs bg-orange-900/30 text-orange-300 px-2 py-1 rounded border border-orange-800">Hibernate</span>
                         </div>
-                        <h3 class="text-xl font-bold mb-2 text-white">Gestión de Usuarios API</h3>
+                        <h3 class="text-xl font-bold mb-2 text-white group-hover:text-brand-accent transition">Gestión de Usuarios API</h3>
                         <p class="text-brand-text text-sm mb-4">
                             Sistema backend seguro para administración de roles y usuarios, implementando autenticación JWT.
                         </p>
@@ -158,16 +160,17 @@
                     </div>
                 </article>
 
-                <article class="bg-brand-card rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition duration-300 border border-gray-800 shadow-xl">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center relative group">
-                         <i class="fa-solid fa-server text-4xl text-gray-500 group-hover:text-white transition"></i>
+                <article class="bg-brand-card rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition duration-300 border border-gray-800 shadow-xl hover:shadow-2xl hover:shadow-black/50 group">
+                    <div class="h-48 bg-gray-900 flex items-center justify-center relative">
+                         <div class="absolute inset-0 bg-brand-dark/50 group-hover:bg-brand-accent/10 transition"></div>
+                         <i class="fa-solid fa-server text-4xl text-gray-500 group-hover:text-brand-accent transition"></i>
                     </div>
                     <div class="p-6">
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-purple-900/50 text-purple-300 px-2 py-1 rounded border border-purple-800">ASP.NET</span>
-                            <span class="text-xs bg-blue-900/50 text-blue-300 px-2 py-1 rounded border border-blue-800">SQL Server</span>
+                            <span class="text-xs bg-purple-900/30 text-purple-300 px-2 py-1 rounded border border-purple-800">ASP.NET</span>
+                            <span class="text-xs bg-blue-900/30 text-blue-300 px-2 py-1 rounded border border-blue-800">SQL Server</span>
                         </div>
-                        <h3 class="text-xl font-bold mb-2 text-white">Sistema de Facturación</h3>
+                        <h3 class="text-xl font-bold mb-2 text-white group-hover:text-brand-accent transition">Sistema de Facturación</h3>
                         <p class="text-brand-text text-sm mb-4">
                             Aplicación web con arquitectura MVC para control de inventarios y emisión de facturas.
                         </p>
@@ -175,16 +178,17 @@
                     </div>
                 </article>
 
-                <article class="bg-brand-card rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition duration-300 border border-gray-800 shadow-xl">
-                    <div class="h-48 bg-gray-700 flex items-center justify-center relative group">
-                         <i class="fa-solid fa-database text-4xl text-gray-500 group-hover:text-white transition"></i>
+                <article class="bg-brand-card rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition duration-300 border border-gray-800 shadow-xl hover:shadow-2xl hover:shadow-black/50 group">
+                    <div class="h-48 bg-gray-900 flex items-center justify-center relative">
+                         <div class="absolute inset-0 bg-brand-dark/50 group-hover:bg-brand-accent/10 transition"></div>
+                         <i class="fa-solid fa-database text-4xl text-gray-500 group-hover:text-brand-accent transition"></i>
                     </div>
                     <div class="p-6">
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-yellow-900/50 text-yellow-300 px-2 py-1 rounded border border-yellow-800">Python</span>
-                            <span class="text-xs bg-blue-900/50 text-blue-300 px-2 py-1 rounded border border-blue-800">Postgres</span>
+                            <span class="text-xs bg-yellow-900/30 text-yellow-300 px-2 py-1 rounded border border-yellow-800">Python</span>
+                            <span class="text-xs bg-blue-900/30 text-blue-300 px-2 py-1 rounded border border-blue-800">Postgres</span>
                         </div>
-                        <h3 class="text-xl font-bold mb-2 text-white">Analítica de Datos</h3>
+                        <h3 class="text-xl font-bold mb-2 text-white group-hover:text-brand-accent transition">Analítica de Datos</h3>
                         <p class="text-brand-text text-sm mb-4">
                             Scripts automatizados para la extracción y transformación de datos (ETL) desde Postgres.
                         </p>
@@ -196,13 +200,13 @@
         </div>
     </section>
 
-    <section id="certificados" class="py-20 bg-brand-dark border-t border-gray-800">
+    <section id="certificados" class="py-20 bg-brand-dark border-t border-gray-900">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-12 text-center">Certificaciones y Logros</h2>
+            <h2 class="text-3xl font-bold mb-12 text-center text-white">Certificaciones y Logros</h2>
             
             <div class="grid md:grid-cols-2 gap-8">
                 
-                <div class="group bg-brand-card rounded-2xl p-4 border border-gray-800 hover:border-brand-accent transition hover:shadow-2xl hover:shadow-blue-900/20">
+                <div class="group bg-brand-card rounded-2xl p-4 border border-gray-800 hover:border-brand-accent transition hover:shadow-2xl hover:shadow-brand-accent/10">
                     <div class="h-64 overflow-hidden rounded-xl bg-gray-900 relative border border-gray-800/50">
                         <img src="img/git-platzi.jpg" 
                              alt="Certificado Git y GitHub Platzi" 
@@ -211,10 +215,10 @@
                     <div class="mt-6 px-2">
                         <div class="flex justify-between items-start">
                             <div>
-                                <h3 class="text-xl font-bold text-white">Curso de Git y GitHub</h3>
+                                <h3 class="text-xl font-bold text-white group-hover:text-brand-accent transition">Curso de Git y GitHub</h3>
                                 <p class="text-brand-accent font-medium mt-1">Platzi</p>
                             </div>
-                            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">2026</span>
+                            <span class="text-xs bg-brand-accent/10 text-brand-accent px-2 py-1 rounded border border-brand-accent/20">2026</span>
                         </div>
                         <p class="text-brand-text text-sm mt-3">
                             Gestión de versiones y colaboración en equipo. Control de ramas, pull requests, releases y flujos de trabajo seguros (CI/CD).
@@ -222,7 +226,7 @@
                     </div>
                 </div>
 
-                <div class="group bg-brand-card rounded-2xl p-4 border border-gray-800 hover:border-brand-accent transition hover:shadow-2xl hover:shadow-blue-900/20">
+                <div class="group bg-brand-card rounded-2xl p-4 border border-gray-800 hover:border-brand-accent transition hover:shadow-2xl hover:shadow-brand-accent/10">
                     <div class="h-64 overflow-hidden rounded-xl bg-gray-900 relative border border-gray-800/50">
                         <img src="img/certificado2.png" 
                              alt="Certificado Bases de Datos" 
@@ -231,10 +235,10 @@
                     <div class="mt-6 px-2">
                         <div class="flex justify-between items-start">
                             <div>
-                                <h3 class="text-xl font-bold text-white">Administración SQL Server</h3>
+                                <h3 class="text-xl font-bold text-white group-hover:text-brand-accent transition">Administración SQL Server</h3>
                                 <p class="text-brand-accent font-medium mt-1">Plataforma Udemy / Coursera</p>
                             </div>
-                            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">2024</span>
+                            <span class="text-xs bg-brand-accent/10 text-brand-accent px-2 py-1 rounded border border-brand-accent/20">2024</span>
                         </div>
                         <p class="text-brand-text text-sm mt-3">
                             Especialización en optimización de consultas, stored procedures y seguridad en bases de datos.
@@ -245,7 +249,7 @@
             </div>
             
             <div class="text-center mt-12">
-                <a href="#" class="inline-flex items-center text-brand-text hover:text-white transition border-b border-transparent hover:border-brand-accent pb-1">
+                <a href="#" class="inline-flex items-center text-brand-accent hover:text-green-400 transition border-b border-transparent hover:border-brand-accent pb-1">
                     Ver perfil completo en LinkedIn <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
                 </a>
             </div>
@@ -253,14 +257,14 @@
         </div>
     </section>
 
-    <footer id="contacto" class="bg-black py-12 border-t border-gray-800 text-center">
-        <h2 class="text-2xl font-bold mb-6">¿Trabajamos juntos?</h2>
+    <footer id="contacto" class="bg-black py-12 border-t border-gray-900 text-center">
+        <h2 class="text-2xl font-bold mb-6 text-white">¿Trabajamos juntos?</h2>
         <p class="text-brand-text mb-8 max-w-lg mx-auto">Estoy listo para iniciar mi carrera profesional y aportar valor a tu equipo.</p>
         
         <div class="flex justify-center gap-8 mb-8">
-            <a href="#" class="text-4xl text-gray-500 hover:text-white transition hover:scale-110"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#" class="text-4xl text-gray-500 hover:text-white transition hover:scale-110"><i class="fa-brands fa-github"></i></a>
-            <a href="mailto:tuemail@gmail.com" class="text-4xl text-gray-500 hover:text-white transition hover:scale-110"><i class="fa-solid fa-envelope"></i></a>
+            <a href="#" class="text-4xl text-gray-500 hover:text-brand-accent transition hover:scale-110"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" class="text-4xl text-gray-500 hover:text-brand-accent transition hover:scale-110"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:tuemail@gmail.com" class="text-4xl text-gray-500 hover:text-brand-accent transition hover:scale-110"><i class="fa-solid fa-envelope"></i></a>
         </div>
         <p class="text-sm text-gray-600">© 2026 Manolo Aguilar. Desarrollado con HTML + Tailwind CSS.</p>
     </footer>
