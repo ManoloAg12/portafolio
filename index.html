@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio | Manolo Vargas</title>
+    
+    <title>Manolo Aguilar</title>
+    
+    <link rel="icon" type="image/png" href="img/revelador (1).png">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -17,10 +21,10 @@
                     },
                     colors: {
                         brand: {
-                            dark: '#0c0c0c', /* Fondo Negro Mate Profundo */
-                            card: '#171717', /* Tarjetas Gris Carbón Oscuro */
-                            accent: '#16a34a', /* NUEVO ACENTO: Verde Vibrante (Green-600) */
-                            text: '#a3a3a3'  /* Texto gris medio */
+                            dark: '#0c0c0c', 
+                            card: '#171717', 
+                            accent: '#16a34a', 
+                            text: '#a3a3a3' 
                         }
                     }
                 }
@@ -135,7 +139,7 @@
         </div>
     </section>
 
-    <section id="proyectos" class="py-20">
+<section id="proyectos" class="py-20">
         <div class="max-w-6xl mx-auto px-4">
             <h2 class="text-3xl font-bold mb-4 text-white">Proyectos Académicos</h2>
             <p class="text-brand-text mb-12">Aplicando teoría a soluciones reales.</p>
@@ -143,56 +147,198 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
                 <article class="bg-brand-card rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition duration-300 border border-gray-800 shadow-xl hover:shadow-2xl hover:shadow-black/50 group">
-                    <div class="h-48 bg-gray-900 flex items-center justify-center relative">
-                        <div class="absolute inset-0 bg-brand-dark/50 group-hover:bg-brand-accent/10 transition"></div>
-                        <i class="fa-solid fa-code text-4xl text-gray-500 group-hover:text-brand-accent transition"></i>
+                    <div class="relative h-48 bg-gray-900 group/carousel" data-carousel="1">
+                        <div class="relative w-full h-full overflow-hidden">
+                            <div class="carousel-slide absolute inset-0 transition-opacity duration-500 opacity-100 z-10">
+                                <img src="img/proyect/siar-1.jpg" class="w-full h-full object-cover" alt="SIAR 1">
+                            </div>
+                            <div class="carousel-slide absolute inset-0 transition-opacity duration-500 opacity-0 z-0">
+                                <img src="img/proyect/siar-2.jpg" class="w-full h-full object-cover" alt="SIAR 2">
+                            </div>
+                            <div class="carousel-slide absolute inset-0 transition-opacity duration-500 opacity-0 z-0">
+                                <img src="img/proyect/siar-3.jpg" class="w-full h-full object-cover" alt="SIAR 3">
+                            </div>
+                            <div class="carousel-slide absolute inset-0 transition-opacity duration-500 opacity-0 z-0">
+                                <img src="img/proyect/siar-4.jpg" class="w-full h-full object-cover" alt="SIAR 4">
+                            </div>
+                            <div class="carousel-slide absolute inset-0 transition-opacity duration-500 opacity-0 z-0 bg-black">
+                                <video class="w-full h-full object-cover" controls muted>
+                                    <source src="img/proyect/siar-video.mp4" type="video/mp4">
+                                    Tu navegador no soporta video.
+                                </video>
+                            </div>
+                        </div>
+                        
+                        <button class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-brand-accent text-white p-2 rounded-full z-20 opacity-0 group-hover/carousel:opacity-100 transition">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button class="next-btn absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-brand-accent text-white p-2 rounded-full z-20 opacity-0 group-hover/carousel:opacity-100 transition">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
                     </div>
+
                     <div class="p-6">
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-blue-900/30 text-blue-300 px-2 py-1 rounded border border-blue-800">Spring Boot</span>
-                            <span class="text-xs bg-orange-900/30 text-orange-300 px-2 py-1 rounded border border-orange-800">Hibernate</span>
+                            <span class="text-xs bg-green-900/30 text-green-300 px-2 py-1 rounded border border-green-800">Python</span>
+                            <span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded border border-gray-700">Postgres</span>
                         </div>
-                        <h3 class="text-xl font-bold mb-2 text-white group-hover:text-brand-accent transition">Gestión de Usuarios API</h3>
+                        <h3 class="text-xl font-bold mb-2 text-white group-hover:text-brand-accent transition">SIAR (Sistema de Riego)</h3>
                         <p class="text-brand-text text-sm mb-4">
-                            Sistema backend seguro para administración de roles y usuarios, implementando autenticación JWT.
+                            Aplicación web para la automatización de riego. Control eficiente de recursos hídricos.
                         </p>
-                        <a href="#" class="text-brand-accent text-sm font-bold hover:underline">Ver Código <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        <a href="https://github.com/ManoloAg12" target="_blank" class="text-brand-accent text-sm font-bold hover:underline">Ver Código <i class="fa-solid fa-arrow-right ml-1"></i></a>
                     </div>
                 </article>
 
                 <article class="bg-brand-card rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition duration-300 border border-gray-800 shadow-xl hover:shadow-2xl hover:shadow-black/50 group">
-                    <div class="h-48 bg-gray-900 flex items-center justify-center relative">
-                         <div class="absolute inset-0 bg-brand-dark/50 group-hover:bg-brand-accent/10 transition"></div>
-                         <i class="fa-solid fa-server text-4xl text-gray-500 group-hover:text-brand-accent transition"></i>
+                    <div class="relative h-48 bg-gray-900 group/carousel" data-carousel="2">
+                        <div class="relative w-full h-full overflow-hidden">
+                            <div class="carousel-slide absolute inset-0 transition-opacity duration-500 opacity-100 z-10">
+                                <img src="img/proyect/super-1.jpg" class="w-full h-full object-cover" alt="Super 1">
+                            </div>
+                            <div class="carousel-slide absolute inset-0 transition-opacity duration-500 opacity-0 z-0">
+                                <img src="img/proyect/super-2.jpg" class="w-full h-full object-cover" alt="Super 2">
+                            </div>
+                            <div class="carousel-slide absolute inset-0 transition-opacity duration-500 opacity-0 z-0">
+                                <img src="img/proyect/super-3.jpg" class="w-full h-full object-cover" alt="Super 3">
+                            </div>
+                            <div class="carousel-slide absolute inset-0 transition-opacity duration-500 opacity-0 z-0">
+                                <img src="img/proyect/super-4.jpg" class="w-full h-full object-cover" alt="Super 4">
+                            </div>
+                            <div class="carousel-slide absolute inset-0 transition-opacity duration-500 opacity-0 z-0 bg-black">
+                                <video class="w-full h-full object-cover" controls muted>
+                                    <source src="img/proyect/super-video.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        <button class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-brand-accent text-white p-2 rounded-full z-20 opacity-0 group-hover/carousel:opacity-100 transition"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="next-btn absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-brand-accent text-white p-2 rounded-full z-20 opacity-0 group-hover/carousel:opacity-100 transition"><i class="fa-solid fa-chevron-right"></i></button>
                     </div>
+
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-green-900/30 text-green-300 px-2 py-1 rounded border border-green-800">Python</span>
+                            <span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded border border-gray-700">MySQL</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-white group-hover:text-brand-accent transition">SuperMarket</h3>
+                        <p class="text-brand-text text-sm mb-4">
+                            Tienda virtual completa. Gestión de inventario, ventas y catálogo de productos en línea.
+                        </p>
+                        <a href="https://github.com/ManoloAg12" target="_blank" class="text-brand-accent text-sm font-bold hover:underline">Ver Código <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </article>
+
+                <article class="bg-brand-card rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition duration-300 border border-gray-800 shadow-xl hover:shadow-2xl hover:shadow-black/50 group">
+                    <div class="relative h-48 bg-gray-900 group/carousel" data-carousel="3">
+                        <div class="relative w-full h-full overflow-hidden">
+                            <div class="carousel-slide absolute inset-0 transition-opacity duration-500 opacity-100 z-10">
+                                <img src="img/proyect/micompra-1.jpg" class="w-full h-full object-cover" alt="MiCompra 1">
+                            </div>
+                            <div class="carousel-slide absolute inset-0 transition-opacity duration-500 opacity-0 z-0">
+                                <img src="img/proyect/micompra-2.jpg" class="w-full h-full object-cover" alt="MiCompra 2">
+                            </div>
+                            <div class="carousel-slide absolute inset-0 transition-opacity duration-500 opacity-0 z-0">
+                                <img src="img/proyect/micompra-3.jpg" class="w-full h-full object-cover" alt="MiCompra 3">
+                            </div>
+                            <div class="carousel-slide absolute inset-0 transition-opacity duration-500 opacity-0 z-0">
+                                <img src="img/proyect/micompra-4.jpg" class="w-full h-full object-cover" alt="MiCompra 4">
+                            </div>
+                            <div class="carousel-slide absolute inset-0 transition-opacity duration-500 opacity-0 z-0 bg-black">
+                                <video class="w-full h-full object-cover" controls muted>
+                                    <source src="img/proyect/micompra-video.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        <button class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-brand-accent text-white p-2 rounded-full z-20 opacity-0 group-hover/carousel:opacity-100 transition"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="next-btn absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-brand-accent text-white p-2 rounded-full z-20 opacity-0 group-hover/carousel:opacity-100 transition"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-yellow-900/30 text-yellow-300 px-2 py-1 rounded border border-yellow-800">Java</span>
+                            <span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded border border-gray-700">JPA-Hibernate</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-white group-hover:text-brand-accent transition">MiCompraYA</h3>
+                        <p class="text-brand-text text-sm mb-4">
+                            Aplicación empresarial para supermercados. Backend robusto para manejo transaccional de compras.
+                        </p>
+                        <a href="https://github.com/ManoloAg12" target="_blank" class="text-brand-accent text-sm font-bold hover:underline">Ver Código <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </article>
+
+                <article class="bg-brand-card rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition duration-300 border border-gray-800 shadow-xl hover:shadow-2xl hover:shadow-black/50 group">
+                    <div class="relative h-48 bg-gray-900 group/carousel" data-carousel="4">
+                        <div class="relative w-full h-full overflow-hidden">
+                            <div class="carousel-slide absolute inset-0 transition-opacity duration-500 opacity-100 z-10">
+                                <img src="img/proyect/pict-1.jpg" class="w-full h-full object-cover" alt="Pict 1">
+                            </div>
+                            <div class="carousel-slide absolute inset-0 transition-opacity duration-500 opacity-0 z-0">
+                                <img src="img/proyect/pict-2.jpg" class="w-full h-full object-cover" alt="Pict 2">
+                            </div>
+                            <div class="carousel-slide absolute inset-0 transition-opacity duration-500 opacity-0 z-0">
+                                <img src="img/proyect/pict-3.jpg" class="w-full h-full object-cover" alt="Pict 3">
+                            </div>
+                            <div class="carousel-slide absolute inset-0 transition-opacity duration-500 opacity-0 z-0">
+                                <img src="img/proyect/pict-4.jpg" class="w-full h-full object-cover" alt="Pict 4">
+                            </div>
+                            <div class="carousel-slide absolute inset-0 transition-opacity duration-500 opacity-0 z-0 bg-black">
+                                <video class="w-full h-full object-cover" controls muted>
+                                    <source src="img/proyect/pict-video.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        <button class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-brand-accent text-white p-2 rounded-full z-20 opacity-0 group-hover/carousel:opacity-100 transition"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="next-btn absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-brand-accent text-white p-2 rounded-full z-20 opacity-0 group-hover/carousel:opacity-100 transition"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+
                     <div class="p-6">
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="text-xs bg-purple-900/30 text-purple-300 px-2 py-1 rounded border border-purple-800">ASP.NET</span>
-                            <span class="text-xs bg-blue-900/30 text-blue-300 px-2 py-1 rounded border border-blue-800">SQL Server</span>
+                            <span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded border border-gray-700">SQL Server</span>
                         </div>
-                        <h3 class="text-xl font-bold mb-2 text-white group-hover:text-brand-accent transition">Sistema de Facturación</h3>
+                        <h3 class="text-xl font-bold mb-2 text-white group-hover:text-brand-accent transition">PictSmart</h3>
                         <p class="text-brand-text text-sm mb-4">
-                            Aplicación web con arquitectura MVC para control de inventarios y emisión de facturas.
+                            Catálogo interactivo de smartphones. Interfaz moderna con Bootstrap y gestión de datos con SQL.
                         </p>
-                        <a href="#" class="text-brand-accent text-sm font-bold hover:underline">Ver Código <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        <a href="https://github.com/ManoloAg12" target="_blank" class="text-brand-accent text-sm font-bold hover:underline">Ver Código <i class="fa-solid fa-arrow-right ml-1"></i></a>
                     </div>
                 </article>
 
                 <article class="bg-brand-card rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition duration-300 border border-gray-800 shadow-xl hover:shadow-2xl hover:shadow-black/50 group">
-                    <div class="h-48 bg-gray-900 flex items-center justify-center relative">
-                         <div class="absolute inset-0 bg-brand-dark/50 group-hover:bg-brand-accent/10 transition"></div>
-                         <i class="fa-solid fa-database text-4xl text-gray-500 group-hover:text-brand-accent transition"></i>
+                    <div class="relative h-48 bg-gray-900 group/carousel" data-carousel="5">
+                        <div class="relative w-full h-full overflow-hidden">
+                            <div class="carousel-slide absolute inset-0 transition-opacity duration-500 opacity-100 z-10">
+                                <img src="img/proyect/tutor-1.jpg" class="w-full h-full object-cover" alt="Tutor 1">
+                            </div>
+                            <div class="carousel-slide absolute inset-0 transition-opacity duration-500 opacity-0 z-0">
+                                <img src="img/proyect/tutor-2.jpg" class="w-full h-full object-cover" alt="Tutor 2">
+                            </div>
+                            <div class="carousel-slide absolute inset-0 transition-opacity duration-500 opacity-0 z-0">
+                                <img src="img/proyect/tutor-3.jpg" class="w-full h-full object-cover" alt="Tutor 3">
+                            </div>
+                            <div class="carousel-slide absolute inset-0 transition-opacity duration-500 opacity-0 z-0">
+                                <img src="img/proyect/tutor-4.jpg" class="w-full h-full object-cover" alt="Tutor 4">
+                            </div>
+                            <div class="carousel-slide absolute inset-0 transition-opacity duration-500 opacity-0 z-0 bg-black">
+                                <video class="w-full h-full object-cover" controls muted>
+                                    <source src="img/proyect/tutor-video.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        <button class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-brand-accent text-white p-2 rounded-full z-20 opacity-0 group-hover/carousel:opacity-100 transition"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="next-btn absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-brand-accent text-white p-2 rounded-full z-20 opacity-0 group-hover/carousel:opacity-100 transition"><i class="fa-solid fa-chevron-right"></i></button>
                     </div>
+
                     <div class="p-6">
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-yellow-900/30 text-yellow-300 px-2 py-1 rounded border border-yellow-800">Python</span>
-                            <span class="text-xs bg-blue-900/30 text-blue-300 px-2 py-1 rounded border border-blue-800">Postgres</span>
+                            <span class="text-xs bg-yellow-600/30 text-yellow-200 px-2 py-1 rounded border border-yellow-800">JavaScript</span>
+                            <span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded border border-gray-700">JSON</span>
                         </div>
-                        <h3 class="text-xl font-bold mb-2 text-white group-hover:text-brand-accent transition">Analítica de Datos</h3>
+                        <h3 class="text-xl font-bold mb-2 text-white group-hover:text-brand-accent transition">TutorEX</h3>
                         <p class="text-brand-text text-sm mb-4">
-                            Scripts automatizados para la extracción y transformación de datos (ETL) desde Postgres.
+                            Plataforma educativa dinámica. Manipulación de datos en cliente utilizando estructuras JSON.
                         </p>
-                        <a href="#" class="text-brand-accent text-sm font-bold hover:underline">Ver Código <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        <a href="https://github.com/ManoloAg12" target="_blank" class="text-brand-accent text-sm font-bold hover:underline">Ver Código <i class="fa-solid fa-arrow-right ml-1"></i></a>
                     </div>
                 </article>
 
@@ -249,7 +395,7 @@
             </div>
             
             <div class="text-center mt-12">
-                <a href="#" class="inline-flex items-center text-brand-accent hover:text-green-400 transition border-b border-transparent hover:border-brand-accent pb-1">
+                <a href="https://www.linkedin.com/in/manolo-herminio-vargas-aguilar-706012295" target="_blank" class="inline-flex items-center text-brand-accent hover:text-green-400 transition border-b border-transparent hover:border-brand-accent pb-1">
                     Ver perfil completo en LinkedIn <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
                 </a>
             </div>
@@ -262,14 +408,15 @@
         <p class="text-brand-text mb-8 max-w-lg mx-auto">Estoy listo para iniciar mi carrera profesional y aportar valor a tu equipo.</p>
         
         <div class="flex justify-center gap-8 mb-8">
-            <a href="#" class="text-4xl text-gray-500 hover:text-brand-accent transition hover:scale-110"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#" class="text-4xl text-gray-500 hover:text-brand-accent transition hover:scale-110"><i class="fa-brands fa-github"></i></a>
-            <a href="mailto:tuemail@gmail.com" class="text-4xl text-gray-500 hover:text-brand-accent transition hover:scale-110"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/manolo-herminio-vargas-aguilar-706012295" target="_blank" class="text-4xl text-gray-500 hover:text-brand-accent transition hover:scale-110"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/ManoloAg12" target="_blank" class="text-4xl text-gray-500 hover:text-brand-accent transition hover:scale-110"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:mv815455@gmail.com" class="text-4xl text-gray-500 hover:text-brand-accent transition hover:scale-110"><i class="fa-solid fa-envelope"></i></a>
         </div>
         <p class="text-sm text-gray-600">© 2026 Manolo Aguilar. Desarrollado con HTML + Tailwind CSS.</p>
     </footer>
 
     <script src="js/home.js"></script>
+    <script src="js/carousel.js"></script>
 
 </body>
 </html>
